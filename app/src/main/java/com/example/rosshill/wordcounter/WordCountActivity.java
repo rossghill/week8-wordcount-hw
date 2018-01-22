@@ -13,6 +13,7 @@ public class WordCountActivity extends AppCompatActivity {
     EditText editText;
     Button countButton;
     TextView resultCount;
+    String words;
 
 
     @Override
@@ -24,8 +25,16 @@ public class WordCountActivity extends AppCompatActivity {
         resultCount = findViewById(R.id.textView4);
     }
 
+    public int getCount() {
+        String[] wordArray = words.trim().split("\\s+");
+        int wordCount = wordArray.length;
+        return wordCount;
+    }
+
     public void onCountButtonClicked(View button){
         String edit_text = editText.getText().toString();
-        Log.d(getClass().toString(), "Button clicked:");
+        String[] wordArray = edit_text.trim().split("\\s+");
+        int wordCount = wordArray.length;
+        resultCount.setText(String.valueOf(wordCount));
     }
 }

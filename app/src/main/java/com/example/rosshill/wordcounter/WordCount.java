@@ -5,16 +5,16 @@ package com.example.rosshill.wordcounter;
  */
 
 public class WordCount {
-
-    String words;
-
-    public WordCount(String words){
-        this.words = words;
-    }
-
-    public int getCount() {
-        String[] wordArray = words.trim().split("\\s+");
-        int wordCount = wordArray.length;
-        return wordCount;
-    }
+//
+//    String words;
+//
+//    public WordCount(String words){
+//        this.words = words;
+//    }
+//
+//    public int getCount() {
+//        String[] wordArray = words.trim().split("\\s+");
+//        int wordCount = wordArray.length;
+//        return wordCount;
+//    }
 }
