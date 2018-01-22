@@ -13,6 +13,8 @@ public class WordCount {
     }
 
     public int getCount() {
-        return words.length();
+        String[] wordArray = words.trim().split("\\s+");
+        int wordCount = wordArray.length;
+        return wordCount;
     }
 }
