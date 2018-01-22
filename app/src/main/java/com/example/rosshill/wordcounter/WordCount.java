@@ -5,4 +5,14 @@ package com.example.rosshill.wordcounter;
  */
 
 public class WordCount {
+
+    String words;
+
+    public WordCount(String words){
+        this.words = words;
+    }
+
+    public int getCount() {
+        return words.length();
+    }
 }

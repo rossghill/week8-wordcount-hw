@@ -1,5 +1,6 @@
 package com.example.rosshill.wordcounter;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -10,8 +11,16 @@ import static org.junit.Assert.*;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 public class WordCountTest {
+
+    WordCount words;
+
+    @Before
+    public void before() {
+        words = new WordCount("If credit's what matters, I'll take credit");
+    }
+
     @Test
-    public void addition_isCorrect() throws Exception {
-        assertEquals(4, 2 + 2);
+    public void countWords()  {
+        assertEquals(7, words.getCount());
     }
 }
