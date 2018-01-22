@@ -8,11 +8,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class WordCountActivity extends AppCompatActivity {
 
     EditText editText;
     Button countButton;
     TextView resultCount;
+    Button occurrencesButton;
+    TextView occurrencesResult;
     String words;
 
 
@@ -23,6 +28,8 @@ public class WordCountActivity extends AppCompatActivity {
         editText = findViewById(R.id.editText);
         countButton = findViewById(R.id.button);
         resultCount = findViewById(R.id.textView4);
+        occurrencesButton = findViewById(R.id.button2);
+        occurrencesResult = findViewById(R.id.result2);
     }
 
     public int getCount() {
@@ -36,5 +43,21 @@ public class WordCountActivity extends AppCompatActivity {
         String[] wordArray = edit_text.trim().split("\\s+");
         int wordCount = wordArray.length;
         resultCount.setText(String.valueOf(wordCount));
+    }
+
+    public void onOccurrencesButtonClicked(View button2){
+        int count = 1;
+        HashMap countOfOccurences = new HashMap<String, Integer>();
+        String edit_text = editText.getText().toString();
+        String[] wordArray = edit_text.trim().split("\\s+");
+
+        for (String word : wordArray) {
+            if (word != null) {
+            countOfOccurences.put(word, count);}
+             else {
+                countOfOccurences.put(word, count + 1);
+                }
+        }
+        occurrencesResult.setText(countOfOccurences.toString());
     }
 }

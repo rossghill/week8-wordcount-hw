@@ -2,4 +2,5 @@
     <string name="app_name">WordCounter</string>
     <string name="word_count_text">Enter the words to count here!</string>
     <string name="count_button">COUNT!</string>
+    <string name="occurrences_button">OCCURRENCES!</string>
 </resources>
